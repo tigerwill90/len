@@ -25,7 +25,7 @@ func main() {
 		r = bufio.NewReader(os.Stdin)
 	}
 
-	buf := make([]byte, 1*1024*1024)
+	buf := make([]byte, 1<<20)
 	for {
 		n, err := r.Read(buf)
 		if err != nil {
